@@ -49,8 +49,8 @@ export default function Comment(props) {
                                 fetch('/api/comment/new',
                                 {method : 'POST',body : JSON.stringify({content : comment, parent : props._id.toString()}) })
                                 .then(() => {
-                                    comment_load()
                                     set_comment('')
+                                    comment_load()
                                     document.getElementById('comment_input').value = null
                                 })
 
